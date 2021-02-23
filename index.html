@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WebRTC API</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+<section id='container' class="container-custom">
+
+  <main>
+    <h1><span>WebRTC</span> API</h1>
+
+    <div class="video-container">
+      <div class="record"></div>
+      <video id='gum' class="gum" autoplay muted playsinline></video>
+      <canvas></canvas>
+    </div>
+
+    <section class="btns">
+
+      <div class="btns--block btns--block1">
+        <button type="button" id='start' class="btn btn-primary">Start Camera</button>
+        <button type="button" id="screensharing" class="btn btn-warning" disabled>ScreenSharing</button>
+        <button type="button" id='snapshot' class="btn btn-info" disabled>Take Snapshot</button>
+      </div>
+
+      <div class="btns--block btns--block2">
+        <button type="button" id='play' class="btn btn-success" disabled>Play</button>
+        <button type="button" id='record' class="btn btn-dark" disabled>Record</button>
+        <button type="button" id='download' class="btn btn-danger" disabled>Download</button>
+      </div>
+
+      <div class="btns--block btns--block3">
+        <label for="filter">Filter:</label>
+        <select class="form-control" id="filter" disabled>
+          <option value="none">None</option>
+          <option value="blur">Blur</option>
+          <option value="grayscale">Grayscale</option>
+          <option value="invert">Invert</option>
+          <option value="sepia">Sepia</option>
+        </select>
+      </div>
+
+    </section>
+  </main>
+
+</section>
+
+
+<script src="./webRTC.js"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
